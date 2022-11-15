@@ -1,0 +1,13 @@
+[development]
+51.159.179.137
+
+[production]
+51.159.179.137
+
+[servers:children]
+development
+production
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
