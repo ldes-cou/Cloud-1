@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  vars:
+   sys_packages: [ 'vim', 'git', 'curl' ]
+  tasks:
+   - name: Install Packages
+     apt:
+      name: "{{ sys_packages }}"
+      update_cache: yes
+      state: latest

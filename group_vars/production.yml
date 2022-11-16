@@ -1,0 +1,7 @@
+#don't forget to encrypt with ansible-vault encrypt module
+
+mysql_root_password: carotte
+mysql_app_pass: lllllll
+
+app_env: prod
+app_debug: false

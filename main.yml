@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  become: true
+  roles:
+   - nginx
+
+- hosts: all
+  become: true
+  roles:
+   - msql
