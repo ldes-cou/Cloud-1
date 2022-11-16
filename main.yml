@@ -3,9 +3,10 @@
 - hosts: all
   become: true
   roles:
-   - nginx
+   - { role: docker.yml, tags: docker} #create directory for the roles
+   - { role: install_packages.yml, tags: packages}
 
-- hosts: all
-  become: true
-  roles:
-   - msql
+# # - hosts: all
+# #   become: true
+# #   roles:
+# #    - msql
