@@ -1,0 +1,3 @@
+---
+# vars file for install_packages
+sys_packages: [ 'vim', 'git', 'curl', 'docker']

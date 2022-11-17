@@ -3,8 +3,10 @@
 - hosts: all
   become: true
   roles:
-   - { role: docker.yml, tags: docker} #create directory for the roles
-   - { role: install_packages.yml, tags: packages}
+   - { role: install_docker, tags: docker} #create directory for the roles
+   - { role: install_packages, tags: packages}
+   - { role: deploy_docker, tags: deploy_docker}
+
 
 # # - hosts: all
 # #   become: true
