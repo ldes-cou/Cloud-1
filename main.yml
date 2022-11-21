@@ -3,12 +3,12 @@
 - hosts: all
   become: true
   roles:
-   - { role: install_docker, tags: docker} #create directory for the roles
-   - { role: install_packages, tags: packages}
+  #  - { role: install_docker, tags: docker} #create directory for the roles
+  #  - { role: install_packages, tags: packages}
    - { role: deploy_docker, tags: deploy_docker}
-
-
-# # - hosts: all
-# #   become: true
-# #   roles:
-# #    - msql
+  # tasks:
+  #  - name: Pull Docker Image
+  #    docker_image:
+  #       name: hello-world
+  #       source: pull
+  #       state: present

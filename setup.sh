@@ -1,5 +1,5 @@
 #check if server answers
-ansible all -i hosts.yml -m ping -u root
-
+# ansible all -i hosts -m ping -u root
+ansible all -m ping
 #deploy playbook
-ansible-playbook -i hosts.yml main.yml -u root
+ansible-playbook main.yml 

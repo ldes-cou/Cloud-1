@@ -1,2 +1,3 @@
 ---
 # vars file for deploy_docker
+project_dir: inception
