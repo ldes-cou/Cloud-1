@@ -5,6 +5,10 @@
    copy:
     src: files/{{ project_dir }}
     dest: ~/
+ - name: Set up .env file
+   template:
+    src: project-env.j2
+    dest: /var/www/.env
 
 
 # # use files parameter to use multiple docker-compose.yml files

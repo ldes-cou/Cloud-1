@@ -3,9 +3,9 @@
 - hosts: all
   become: true
   roles:
-  #  - { role: install_docker, tags: docker} #create directory for the roles
-  #  - { role: install_packages, tags: packages}
-   - { role: deploy_docker, tags: deploy_docker}
+   - { role: install_docker, tags: docker} #create directory for the roles
+   - { role: install_packages, tags: packages}
+   - { role: deploy_docker, tags: deploy_docker} #use the tags to control
   # tasks:
   #  - name: Pull Docker Image
   #    docker_image:

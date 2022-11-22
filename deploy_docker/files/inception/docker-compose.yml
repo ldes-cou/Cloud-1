@@ -17,7 +17,7 @@ services:
   wordpress:
     build: ./requirements/wordpress
     container_name: wordpress
-    env_file: ./.env
+    env_file: /var/www/.env
     depends_on: 
       - mariadb
     ports:
