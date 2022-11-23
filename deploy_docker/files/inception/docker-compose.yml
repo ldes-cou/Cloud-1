@@ -20,30 +20,32 @@ services:
     env_file: /var/www/.env
     depends_on: 
       - mariadb
-    ports:
-      #- 51.159.179.137:9000:9000
-       - 127.0.0.1:9000:9000
+    # ports:
+    #   #- 51.159.179.137:9000:9000
+    #    - 127.0.0.1:9000:9000
     volumes:
       - wp_vol:/var/www/html/
     networks:
       - inception
+      - db_network
     restart: on-failure
   
   mariadb:
     build: ./requirements/mariadb
     container_name: mariadb
     env_file: ./.env
-    ports:
+    # ports:
     #- 51.159.179.137:3306:3306
-      - 127.0.0.1:3306:3306
+      # - 127.0.0.1:3306:3306
     volumes:
      - db_vol:/var/lib/mysql
     networks:
-     - inception
+     - db_network
     restart: on-failure
 
 networks:
   inception:
+  db_network:
 
 volumes:
   wp_vol:
