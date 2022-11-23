@@ -26,7 +26,7 @@
 
  - name: Creates env directory
    file:
-    path: /var/www/
+    path: ~/inception/
     state: directory
    with_items:
    - .env
@@ -34,7 +34,7 @@
  - name: Set up .env file
    template:
     src: project-env.j2
-    dest: /var/www/.env
+    dest: ~/inception/.env
  
  # use files parameter to use multiple docker-compose.yml files
  - name: deploy Docker Compose stack
@@ -43,9 +43,17 @@
      files:
      - docker-compose.yml
 
+#  - name: build docker-compose script at reboot
+#    ansible.builtin.cron:
+#     name: "rebuild website"
+#     job:
+#      docker-compose -f {{ compose_file }} build
+#     special_time:
+#      reboot
+
  - name: launch docker-compose script at reboot
    ansible.builtin.cron:
-    name: "rebuild website"
+    name: "docker-compose up"
     job:
      docker-compose -f {{ compose_file }} up
     special_time:
