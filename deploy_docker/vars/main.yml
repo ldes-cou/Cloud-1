@@ -1,3 +1,4 @@
 ---
 # vars file for deploy_docker
 project_dir: inception
+compose_file: inception/docker-compose.yml

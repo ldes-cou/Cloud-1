@@ -13,4 +13,4 @@ RUN chmod +x wp-cli.phar \
 COPY conf/www.conf /etc/php/7.3/fpm/pool.d/
 COPY conf/script.sh .
 
-CMD ./script.sh
+CMD bash script.sh
