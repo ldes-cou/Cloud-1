@@ -15,3 +15,5 @@ else
     echo "mariadb already there"
 fi
 mysqld
+
+#add if not exist + && 
