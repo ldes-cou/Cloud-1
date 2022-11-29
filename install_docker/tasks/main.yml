@@ -33,6 +33,7 @@
         update_cache: yes
       tags:
         - docker
+        
     - name: Update apt packages
       remote_user: root
       apt:
@@ -48,11 +49,6 @@
         update_cache: yes
       tags:
         - docker
-
-  #   - name: install 'Docker SDK for Python'
-  # #become: true               <--- DO NOT DO THIS!!!
-  #     pip:
-  #      name: docker
 
     - name: Install docker-compose from official github repo
       remote_user: root

@@ -45,7 +45,7 @@
 
  - name: launch docker-compose script at reboot
    ansible.builtin.cron:
-    name: "docker-compose up"
+    name: docker-compose up
     job:
      docker-compose -f {{ compose_prod }} up
     special_time:

@@ -1,4 +1,0 @@
-#example of all.yml
-mysql_root: root_pass
-server_host: localhost
-document_root: /var/www
