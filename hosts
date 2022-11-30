@@ -1,8 +1,8 @@
 [development]
-51.159.179.137
+cloud1-is-clacked-on-the-floor.duckdns.org
 
 [production]
-51.159.179.137
+cloud1-is-clacked-on-the-floor.duckdns.org
 
 [servers:children]
 development
